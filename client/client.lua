@@ -17,10 +17,7 @@ end)
 Citizen.CreateThread(function()
     while true and active do
         Citizen.Wait(0)
-        if Citizen.InvokeNative(0x580417101DDB492F, 0, 0xD9D0E1C0) then
-            spacebar = true
-            active = false
-        elseif online then
+        if Citizen.InvokeNative(0x580417101DDB492F, 0, 0xD9D0E1C0) or online then
             spacebar = true
             active = false
         end
